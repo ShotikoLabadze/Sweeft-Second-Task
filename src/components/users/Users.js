@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "../card/Card";
 
 export default function Users(props) {
   return (
@@ -9,11 +10,24 @@ export default function Users(props) {
         if (props.userList.length - 1 === index) {
           return (
             <div key={user.id} ref={props.setLastElement}>
-              <p>{user.id}</p>
+              <Card
+                id={user.id}
+                fullName={`${user.prefix} ${user.name} ${user.lastName}`}
+                title={user.title}
+                imgUrl={user.imageUrl + query}
+              />
             </div>
           );
         }
-        return <p>{user.id}</p>;
+        return (
+          <Card
+            key={user.id}
+            id={user.id}
+            fullName={`${user.prefix} ${user.name} ${user.lastName}`}
+            title={user.title}
+            imgUrl={user.imageUrl + query}
+          />
+        );
       })}
     </div>
   );
