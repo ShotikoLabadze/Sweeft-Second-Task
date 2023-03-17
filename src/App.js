@@ -1,14 +1,17 @@
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+
 import "./App.css";
 import UsersPage from "./pages/usersPage/UsersPage";
-import { Routes, Route } from "react-router-dom";
-function App() {
+import UserPage from "./pages/userPage/UserPage";
+
+export default function App() {
   return (
-    <div className="App">
+    <div className="root-container">
       <Routes>
         <Route path="/" element={<UsersPage />} />
+        <Route path="/user/:id" element={<UserPage />} />
       </Routes>
     </div>
   );
 }
-
-export default App;
