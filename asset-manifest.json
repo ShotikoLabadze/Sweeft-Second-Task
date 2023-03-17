@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Sweeft-Second-Task/static/css/main.81d49f65.css",
+    "main.js": "/Sweeft-Second-Task/static/js/main.a33e2158.js",
+    "index.html": "/Sweeft-Second-Task/index.html",
+    "main.81d49f65.css.map": "/Sweeft-Second-Task/static/css/main.81d49f65.css.map",
+    "main.a33e2158.js.map": "/Sweeft-Second-Task/static/js/main.a33e2158.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81d49f65.css",
+    "static/js/main.a33e2158.js"
+  ]
+}
