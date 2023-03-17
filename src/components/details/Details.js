@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
+import "./Details.css";
 
 export default function Details(props) {
   const { id } = useParams();

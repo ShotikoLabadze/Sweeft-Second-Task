@@ -3,17 +3,20 @@ import Users from "../../components/users/Users";
 import Details from "../../components/details/Details";
 import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router";
+import FollowSequence from "../../components/FollowSequence";
+
+import "./UserPage.css";
 
 export default function SingleUserPage(props) {
   const { id } = useParams();
   const [userFriends, setUserFriends] = useState([]);
+  const [userHistory, setUserHistory] = useState([]);
 
   const [pageNumber, setPageNumber] = useState(1);
   const [lastElement, setLastElement] = useState(null);
 
   const avoider = useRef(
     new IntersectionObserver((elements) => {
-      console.log("here");
       if (elements[0].isIntersecting) {
         setPageNumber((prev) => prev + 1);
       }
@@ -60,8 +63,8 @@ export default function SingleUserPage(props) {
 
   return (
     <div className="container">
-      <Details />
-
+      <Details setUserHistory={setUserHistory} />
+      <FollowSequence userHistory={userHistory} />
       <h2>Friends:</h2>
       <Users setLastElement={setLastElement} userList={userFriends} />
     </div>
