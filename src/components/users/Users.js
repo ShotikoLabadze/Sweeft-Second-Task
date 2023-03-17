@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../card/Card";
-
+import "./Users.css";
 export default function Users(props) {
   return (
     <div className="users-container">

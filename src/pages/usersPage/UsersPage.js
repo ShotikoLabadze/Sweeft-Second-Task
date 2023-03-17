@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
 import Users from "../../components/users/Users";
+import "./UsersPage.css";
 
 export default function UsersPage() {
   const [users, setUsers] = useState([]);
