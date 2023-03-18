@@ -21,7 +21,6 @@ export default function Users(props) {
         }
         return (
           <Card
-            key={user.id}
             id={user.id}
             fullName={`${user.prefix} ${user.name} ${user.lastName}`}
             title={user.title}
